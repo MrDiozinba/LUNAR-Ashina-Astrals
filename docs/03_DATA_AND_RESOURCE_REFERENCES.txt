@@ -1,0 +1,44 @@
+LUNAR — Data, tools and resource references
+
+NASA DATA / RESOURCES USED IN THE COMPUTATIONAL WORKFLOW
+1. NASA Goddard Planetary Geology, Geophysics and Geochemistry Laboratory (PGDA), Site01 high-resolution LOLA terrain product:
+   https://pgda.gsfc.nasa.gov/products/78
+   Used for the local Site01 5 m elevation tile and associated product context. Product attribution should retain NASA/GSFC and source metadata as applicable.
+
+2. NASA PGDA, large-area south-polar LOLA terrain products:
+   https://pgda.gsfc.nasa.gov/products/90
+   Used for regional 20 m / 80 m LOLA elevation products and multi-resolution terrain coverage.
+
+3. NASA/JPL NAIF SPICE generic kernels and documentation:
+   https://naif.jpl.nasa.gov/naif/data.html
+   https://naif.jpl.nasa.gov/pub/naif/generic_kernels/
+   Used with the DE440 short planetary ephemeris, lunar orientation/frame kernels, planetary constants kernel and leap-seconds kernel. Record exact kernel filenames and hashes in the project's provenance metadata.
+
+4. JPL Horizons System / API:
+   https://ssd.jpl.nasa.gov/horizons/
+   https://ssd-api.jpl.nasa.gov/doc/horizons.html
+   Used for independent apparent azimuth/elevation comparisons against SPICE outputs. The saved validation report records the API version, query parameters and access date.
+
+OTHER SOFTWARE / LIBRARIES
+- SpiceyPy: https://spiceypy.readthedocs.io/
+- NumPy: https://numpy.org/
+- Pandas: https://pandas.pydata.org/
+- Rasterio: https://rasterio.readthedocs.io/
+- GDAL: https://gdal.org/
+- PROJ: https://proj.org/
+- Streamlit: https://docs.streamlit.io/
+- Plotly: https://plotly.com/python/
+
+ADDITIONAL RESOURCES EXPLORED FOR SITE DISCOVERY / CONTEXT
+These were researched as candidate workflow resources; do not describe them as data inputs to the current calculation unless the team actually used their data in the final implementation.
+- LROC QuickMap: https://quickmap.lroc.asu.edu/
+- NASA Moon Trek: https://trek.nasa.gov/moon/
+- Canadian Space Agency Moon Exploration portal: https://www.asc-csa.gc.ca/eng/astronomy/moon-exploration/
+
+ATTRIBUTION AND USAGE CAUTIONS
+- NASA data and imagery can have product-specific attribution and use terms. Do not imply NASA endorsement of LUNAR.
+- Do not use NASA insignia, logotype, seal, flags or mission identifiers as though the project were an official NASA product.
+- LROC web-interface imagery/screenshots can have different terms from archived PDS data products. Check the exact data/product licence before redistribution.
+- QuickMap and Moon Trek were explored as reference tools; their displayed layers may have individual third-party rights or terms. Credit the underlying data product, not just the viewer.
+- Cite the exact PGDA product and kernel version used. Keep raw Horizons query responses and the generated comparison report with the project evidence.
+- The video submission guidance requires all other data, resources, tools, code, text and images to be listed, even when open-source or freely available. Confirm any non-NASA terms before redistribution.

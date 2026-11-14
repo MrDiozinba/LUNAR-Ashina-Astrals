@@ -1,0 +1,41 @@
+2026 NASA SPACE APPS — LUNAR SUBMISSION CHECKLIST
+
+REQUIRED SUBMISSION FIELDS (from the official submission/judging video transcript)
+[ ] Project name
+[ ] Project summary (recommended 50–200 words) — see 01_PROJECT_SUMMARY.txt
+[ ] Public project demonstration link — seven-slide PPTX or a video of 30 seconds or less
+[ ] Public project link (working website, code repository or showcase)
+[ ] Project description — see 02_PROJECT_DESCRIPTION.txt
+[ ] SI/AI tools declaration and where/how used — see 04_AI_AND_SI_DISCLOSURE.txt
+[ ] NASA data/resources — see 03_DATA_AND_RESOURCE_REFERENCES.txt
+[ ] Other resources, tools, code, text and images — see 03_DATA_AND_RESOURCE_REFERENCES.txt
+[ ] Optional extra resource links, if applicable
+[ ] Terms and Conditions confirmation
+[ ] Confirm all work is original
+[ ] Click SUBMIT FOR JUDGING (Save Progress alone is not submission)
+[ ] Confirm success banner / submission confirmation appears
+
+DEMO
+- LUNAR_2026_Space_Apps_Submission_Deck.pptx contains exactly 7 slides.
+- Publish it somewhere judges can open without a password, permission request or registration.
+- Open the link in a private/incognito browser window before submitting.
+- All linked materials and the project submission page must be in English. If a video has non-English speech, add English subtitles.
+- Do not include photos, video or audio of individuals under 18.
+
+PUBLIC LINKS TO FILL IN (DO NOT LEAVE AS LOCALHOST)
+Project/application link: [PASTE PUBLIC URL]
+Source repository: [PASTE PUBLIC REPOSITORY URL]
+Demo presentation link: [PASTE PUBLIC PRESENTATION URL]
+
+TEAM ELIGIBILITY
+[ ] Every team member is registered for the same local event.
+[ ] Every member is on the team Members tab and not waitlisted.
+[ ] Team has 1–6 registered members.
+[ ] Coordinate edits; use the Project lock toggle if multiple team members may edit.
+
+DEADLINE FROM VIDEO
+Submission closes Sunday, 15 November 2026 at 11:59 PM according to the local event timezone. Universal Event submissions use the team owner's local time. Submit before the deadline and verify the confirmation banner. The video states that late submissions cannot be judged and post-deadline edit requests are not accepted.
+
+FINAL SCIENTIFIC WORDING
+Use: “provisional single Site01 test point; 48-hour computed interval; 45 km range-limited regional terrain horizon; geometric Sun/Earth disk visibility.”
+Do not claim: globally complete horizon; multiple scientifically validated sites; DSN communications availability; solar electrical power; certified landing-site suitability.

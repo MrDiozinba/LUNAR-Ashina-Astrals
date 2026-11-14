@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local secrets and Streamlit credentials
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example
+
+# Large source rasters and kernel binaries (download separately; cached CSVs are included)
+*.tif
+*.tiff
+*.img
+data/spice/kernels/
+
+# Local / temporary outputs
+.DS_Store
+*.aux.xml
+*.log
+*.tmp
+*.partial

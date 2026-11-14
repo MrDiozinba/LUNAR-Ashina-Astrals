@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "description": "SHA-256 pins for the scientific data bundle used to build this LUNAR v6 audit overlay. Regenerate intentionally whenever SPICE or horizon data are recomputed.",
+  "sha256": {
+    "data/spice/site01_spice_timeline_h1m.csv": "04bfe49bd5fd3ed73eccc5c65a79a5c4518a6286304c5e693c81efcba780cd0e",
+    "data/spice/site01_spice_timeline_h5m.csv": "1b3f4542120c8240f85337ab31a54b37fd4a1886eb0eba858c2eece3664e814c",
+    "data/spice/site01_spice_timeline_metadata.json": "b969c21e167b89cff581a4d01ab5853a7b989a0279015a80beb22ac52ce66311",
+    "data/horizon_masks/site01_multires_h1m.csv": "56bbfe6d704d11a3508a964ff44cd509a8e9a028dfdd469261b2e7f7f90ab5a4",
+    "data/horizon_masks/site01_multires_h5m.csv": "6c9716319b4ff43704b47c958e2ac22761b5e870cad9459a421b28ed797dd22d",
+    "data/horizon_masks/site01_multires_horizon_metadata.json": "4e075ccf2e4c597394183610f620c6db0e77ac12ef99044d65d340135247d0c2",
+    "data/horizon_masks/site01_tile_center_RAYMARCH_PROVISIONAL_metadata.json": "fd9dfd08164ffd439e6351a40e35e208ce647fc62fc61cfef980a71e04374401"
+  }
+}

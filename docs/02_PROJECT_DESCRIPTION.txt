@@ -1,0 +1,29 @@
+LUNAR — Lunar Environment Intelligence and Mission Planning System
+
+WHAT IT DOES
+LUNAR is a scientific decision-support prototype that visualizes how lunar terrain and Sun/Earth geometry shape the local environment at a candidate lunar South Pole surface location. It is designed to make assumptions, coverage and visibility calculations inspectable rather than hiding them inside a single opaque site score.
+
+HOW IT WORKS
+The terrain workflow combines a NASA LOLA 5 m local elevation tile with regional 80 m terrain. A 20 m regional crop was used for cross-resolution consistency checks. A ray-marching processor samples terrain along 3,600 azimuth directions at 0.1-degree spacing and creates observer-height-specific horizon profiles. The current regional terrain profile reaches 45 km; it is explicitly treated as a lower bound with respect to terrain omitted beyond that distance.
+
+The astronomical workflow uses NAIF SPICE with the DE440 short planetary ephemeris and a lunar Mean-Earth frame compatible with the terrain product's stated DE421 reference. Sun and Earth apparent azimuth/elevation are sampled every five minutes. The apparent angular disks are then evaluated against the terrain skyline to estimate the fraction of each disk that is geometrically visible. The outputs are presented in a Streamlit dashboard with a mission overview, site/terrain explorer, environment timeline, observer-height comparison and sampled delay-window screening.
+
+VALIDATION
+The team compared four SPICE timelines with JPL Horizons: Sun at 1 m, Earth at 1 m, Sun at 5 m and Earth at 5 m. Each comparison contained 577 aligned observations. The largest reported elevation residual was 0.000024 degrees (Earth); azimuth residuals were at or below 0.000001 degrees. This is an independent check of apparent ephemeris directions for the selected observer and time interval. It does not validate terrain obstruction or make the model globally complete.
+
+The 5 m/20 m elevation overlap comparison had an RMSE of approximately 0.403 m. The 20 m/80 m comparison had an RMSE of approximately 0.508 m. These are cross-resolution product differences after resampling, not measurements of absolute terrain accuracy.
+
+BENEFITS AND INTENDED IMPACT
+LUNAR brings terrain visibility and astronomical geometry into one reproducible interface. It helps a user inspect when the Sun or Earth is geometrically visible at a given test point, how observer height changes the sampled skyline, and how results vary within the available computed interval. The approach is intended to support early screening and mission-environment understanding; it is not a substitute for mission certification, hazard assessment, a communications link budget or a spacecraft power model.
+
+TOOLS AND TECHNOLOGY
+Python, NumPy, Pandas, Rasterio/GDAL, PROJ, SpiceyPy/NAIF SPICE, DE440 kernels, NASA LOLA DEM products, JPL Horizons API, Streamlit and Plotly. The current prototype is software-only and does not require dedicated hardware.
+
+CREATIVITY AND DESIGN
+The central design choice is to combine multi-resolution terrain horizons with time-dependent apparent celestial disks and to show data provenance and limitations alongside the visual outputs. Observer-height sensitivity and sampled window comparisons are exposed directly; the system does not fabricate uncomputed candidate sites or silently rank them using an arbitrary composite score.
+
+ACCESSIBILITY, ENERGY AND COST
+The prototype uses publicly accessible scientific data and open-source software components where available. It is designed to run as a lightweight Python/Streamlit application on a general-purpose computer. It does not consume or estimate lunar surface energy; solar-panel incidence, storage, efficiency and power-system constraints are outside the current scope. Costs associated with launch, hardware and mission operations are also outside this software prototype's scope.
+
+CURRENT LIMITATIONS
+The current data bundle represents one provisional geometric centre of the supplied Site01 DEM tile, not a verified landing coordinate. The terrain horizon is limited to 45 km and is not globally closed. The SPICE timeline covers 48 hours only. The model does not fully propagate DEM uncertainty, local slopes, boulder/rock hazards, DSN availability, radio-link margins, relay networks or solar-array power. Earth visibility means geometric disk visibility only; it does not guarantee communications. Sun visibility means geometric disk visibility only; it does not guarantee electrical power. The current results are a prototype demonstration, not a landing-site suitability certification.

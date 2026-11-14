@@ -1,0 +1,116 @@
+{
+  "build_script": "build_site01_multires_horizon.py",
+  "heights": [
+    {
+      "site_id": "Site01 provisional tile-centre test point",
+      "observer_projected_x_m": -11000.0,
+      "observer_projected_y_m": -12000.0,
+      "observer_ground_z_from_local_5m_m": 1944.8283386230469,
+      "observer_height_m": 1.0,
+      "azimuth_convention": "local north = 0 degrees, clockwise positive",
+      "azimuth_bin_width_deg": 0.1,
+      "combination_method": "Per-azimuth maximum of the 5 m profile from the observer to the local DEM edge and the 80 m profile from the configured overlap start to the far-field range limit. The far-field profile uses the local 5 m observer ground elevation as its common observer origin.",
+      "local_5m": {
+        "file": "data/dem/Site01_final_adj_5mpp_surf.tif",
+        "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+        "ray_step_m": 0.625,
+        "requested_maximum_range_m": 15000.0,
+        "coverage_end_min_m": 7996.875,
+        "coverage_end_median_m": 8655.9375,
+        "coverage_end_max_m": 11301.875,
+        "tile_boundary_stop_azimuth_bins": 3600,
+        "nodata_stop_azimuth_bins": 0
+      },
+      "regional_80m": {
+        "file": "data/dem/regional_site01_radius50km_80m.tif",
+        "sha256": "fde5754c36bf864b9fe7a9197b8dc964e04f788276bd42fd07a6eaccdb197721",
+        "ray_step_m": 40.0,
+        "sampled_range_m": [
+          7000.0,
+          45000.0
+        ],
+        "coverage_end_min_m": 45000.0,
+        "coverage_end_median_m": 45000.0,
+        "coverage_end_max_m": 45000.0,
+        "range_limited_azimuth_bins": 3600,
+        "tile_boundary_stop_azimuth_bins": 0,
+        "nodata_stop_azimuth_bins": 0,
+        "dem_sampled_ground_z_m": 1943.308349609375,
+        "observer_ground_z_override_m": 1944.8283386230469
+      },
+      "composite_horizon": {
+        "minimum_deg": -3.723297665381395,
+        "median_deg": 0.6358969999999999,
+        "maximum_deg": 2.825961,
+        "regional_80m_dominant_bins": 767,
+        "local_5m_dominant_bins": 2833
+      },
+      "limitations": [
+        "This is a regional horizon profile, not a globally closed lunar horizon.",
+        "Terrain beyond the far-field range limit is omitted and may raise the true horizon.",
+        "The 80 m raster cannot resolve terrain features smaller than its effective spatial resolution.",
+        "DEM vertical and horizontal uncertainties are not fully propagated into this profile.",
+        "The observer is the provisional centre of the Site01 local DEM tile, not a verified lander coordinate.",
+        "The overlap comparison supports grid alignment and elevation consistency but does not establish absolute terrain accuracy."
+      ],
+      "status": "provisional_regional_lower_bound_with_respect_to_omitted_far_terrain",
+      "output_csv": "site01_multires_h1m.csv"
+    },
+    {
+      "site_id": "Site01 provisional tile-centre test point",
+      "observer_projected_x_m": -11000.0,
+      "observer_projected_y_m": -12000.0,
+      "observer_ground_z_from_local_5m_m": 1944.8283386230469,
+      "observer_height_m": 5.0,
+      "azimuth_convention": "local north = 0 degrees, clockwise positive",
+      "azimuth_bin_width_deg": 0.1,
+      "combination_method": "Per-azimuth maximum of the 5 m profile from the observer to the local DEM edge and the 80 m profile from the configured overlap start to the far-field range limit. The far-field profile uses the local 5 m observer ground elevation as its common observer origin.",
+      "local_5m": {
+        "file": "data/dem/Site01_final_adj_5mpp_surf.tif",
+        "sha256": "3ba7b97cb00a2bcf21189c3aeb535f65afc21207154ab9f0d43c5bdc1f7e747e",
+        "ray_step_m": 0.625,
+        "requested_maximum_range_m": 15000.0,
+        "coverage_end_min_m": 7996.875,
+        "coverage_end_median_m": 8655.9375,
+        "coverage_end_max_m": 11301.875,
+        "tile_boundary_stop_azimuth_bins": 3600,
+        "nodata_stop_azimuth_bins": 0
+      },
+      "regional_80m": {
+        "file": "data/dem/regional_site01_radius50km_80m.tif",
+        "sha256": "fde5754c36bf864b9fe7a9197b8dc964e04f788276bd42fd07a6eaccdb197721",
+        "ray_step_m": 40.0,
+        "sampled_range_m": [
+          7000.0,
+          45000.0
+        ],
+        "coverage_end_min_m": 45000.0,
+        "coverage_end_median_m": 45000.0,
+        "coverage_end_max_m": 45000.0,
+        "range_limited_azimuth_bins": 3600,
+        "tile_boundary_stop_azimuth_bins": 0,
+        "nodata_stop_azimuth_bins": 0,
+        "dem_sampled_ground_z_m": 1943.308349609375,
+        "observer_ground_z_override_m": 1944.8283386230469
+      },
+      "composite_horizon": {
+        "minimum_deg": -3.728379873434075,
+        "median_deg": -0.5032380000000001,
+        "maximum_deg": 1.197018,
+        "regional_80m_dominant_bins": 1013,
+        "local_5m_dominant_bins": 2587
+      },
+      "limitations": [
+        "This is a regional horizon profile, not a globally closed lunar horizon.",
+        "Terrain beyond the far-field range limit is omitted and may raise the true horizon.",
+        "The 80 m raster cannot resolve terrain features smaller than its effective spatial resolution.",
+        "DEM vertical and horizontal uncertainties are not fully propagated into this profile.",
+        "The observer is the provisional centre of the Site01 local DEM tile, not a verified lander coordinate.",
+        "The overlap comparison supports grid alignment and elevation consistency but does not establish absolute terrain accuracy."
+      ],
+      "status": "provisional_regional_lower_bound_with_respect_to_omitted_far_terrain",
+      "output_csv": "site01_multires_h5m.csv"
+    }
+  ],
+  "global_status": "provisional_regional_lower_bound_with_respect_to_omitted_far_terrain"
+}

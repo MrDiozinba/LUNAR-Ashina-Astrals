@@ -1,0 +1,74 @@
+{
+  "aberration_correction": "LT+S",
+  "ephemeris": "DE440 short planetary SPK; paired with DE440 lunar orientation PCK and DE440/DE421-compatible ME frame",
+  "frame_id_loaded_from_FK": 31009,
+  "horizon_inputs": {
+    "site01_multires_h1m.csv": "56bbfe6d704d11a3508a964ff44cd509a8e9a028dfdd469261b2e7f7f90ab5a4",
+    "site01_multires_h5m.csv": "6c9716319b4ff43704b47c958e2ac22761b5e870cad9459a421b28ed797dd22d"
+  },
+  "kernel_files": {
+    "de440s.bsp": "c1c7feeab882263fc493a9d5a5b2ddd71b54826cdf65d8d17a76126b260a49f2",
+    "moon_de440_250416.tf": "a47c71e9c9f33796bdafb2c9d69a7ee447b6016ecad80f71cd6f3e479f9cf768",
+    "moon_pa_de440_200625.bpc": "60cd55aa401ea2ea97360636f567554bfe4e37bb829f901b4460a455dfaf783f",
+    "naif0012.tls": "678e32bdb5a744117a467cd9601cd6b373f0e9bc9bbde1371d5eee39600a039b",
+    "pck00011.tpc": "3dff7b1dbeceaa01f25467767d3fa25816051c85d162d1edf04acb310ee28bb1"
+  },
+  "nominal_step_minutes": 5.0,
+  "observer": {
+    "ground_elevation_from_local_5m_dem_m": 1944.8283386230469,
+    "latitude_planetocentric_deg": -89.463162834037,
+    "location_status": "provisional tile-centre test point, not verified lander coordinates",
+    "longitude_east_deg": 222.51044707800085,
+    "moon_reference_sphere_radius_m": 1737400.0,
+    "observer_heights_m": [
+      1.0,
+      5.0
+    ],
+    "vertical_reference": "Assumes DEM Z is radial height above the 1,737,400 m reference sphere; verify against the complete PGDA product README."
+  },
+  "outputs": {
+    "1": {
+      "earth_visibility_counts": {
+        "hidden": 577
+      },
+      "output_csv": "data/spice/site01_spice_timeline_h1m.csv",
+      "sample_count": 577,
+      "sun_visibility_counts": {
+        "full": 577
+      }
+    },
+    "5": {
+      "earth_visibility_counts": {
+        "hidden": 577
+      },
+      "output_csv": "data/spice/site01_spice_timeline_h5m.csv",
+      "sample_count": 577,
+      "sun_visibility_counts": {
+        "full": 577
+      }
+    }
+  },
+  "overall_status": "provisional_scientific_geometry_requires_validation_before_claiming_site_decision_accuracy",
+  "product": "Site01 provisional Sun and geometric Earth visibility timeline",
+  "spice_utc_input_format": "YYYY MON DD HH:MM:SS[.ffffff] UTC",
+  "target_frame": "MOON_ME_DE440_ME421",
+  "terrain_horizon": {
+    "azimuth_interpolation": "linear circular interpolation between 0.1-degree bin centres",
+    "far_terrain_limit_km": 45.0,
+    "source": "multi-resolution 5 m local + 80 m regional horizon CSVs",
+    "status": "regional lower bound; terrain beyond 45 km can raise the true horizon"
+  },
+  "terrain_metadata_sha256": "4e075ccf2e4c597394183610f620c6db0e77ac12ef99044d65d340135247d0c2",
+  "time_system": "UTC input parsed by CSPICE STR2ET; ET/TDB seconds past J2000 stored per row",
+  "time_window_utc": {
+    "end": "2026-11-15T18:30:00+00:00",
+    "start": "2026-11-13T18:30:00+00:00"
+  },
+  "visibility_method": {
+    "disk_fraction": "analytic circular-disk clipping against a locally straight terrain horizon at the disk-centre azimuth",
+    "earth": "geometric Earth disk visibility; not a communications link or DSN availability calculation",
+    "geometry": "SPICE Moon-centred target vectors translated to the surface observer in the lunar ME frame",
+    "sun": "geometric solar disk visibility; not solar-panel power",
+    "surface_normal": "radial normal of the spherical reference surface; local DEM slope is not applied"
+  }
+}

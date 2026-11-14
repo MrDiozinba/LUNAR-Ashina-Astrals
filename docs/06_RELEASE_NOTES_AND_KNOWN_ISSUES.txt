@@ -1,0 +1,14 @@
+LUNAR submission status
+
+The current working prototype contains a multi-resolution LOLA terrain workflow, 3,600-bin regional horizon profiles, DE440 SPICE apparent Sun/Earth timelines, an independent JPL Horizons comparison and a Streamlit dashboard.
+
+The current scientific bundle contains one provisional Site01 tile-centre observer and 48 hours of ephemeris samples. The regional terrain profile ends at 45 km and is not globally closed. It is a proof-of-work prototype, not an operational mission tool or landing-site certification.
+
+The Site Comparison runtime KeyError was traced to a column-name mismatch:
+- backend emits horizon_1m_minus_5m_deg
+- UI requested horizon_depression_5m_vs_1m_deg
+The v7 hotfix changes the UI to use the canonical backend column.
+
+The Mission Delay Simulator visibility curves are flat for the current input because every candidate 24-hour window in the cached interval has Sun disk visibility 100%, Earth disk visibility 0% and simultaneous visibility 0%. The v7 hotfix explains this and adds a geometry-margin plot. The graph is not supposed to invent a change in visibility where none exists.
+
+The v7 hotfix was tested against the uploaded scientific bundle: 44 tests passed. These are package-level tests; the team's machine should still run the hotfix and perform a manual Streamlit smoke test before submission.

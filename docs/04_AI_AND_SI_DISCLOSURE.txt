@@ -1,0 +1,13 @@
+AI / SI TOOL DISCLOSURE — LUNAR
+
+Tools used:
+- ChatGPT (OpenAI): assisted with software architecture, code drafting, debugging, test design, scientific-method review, data interpretation, documentation and presentation wording.
+- Claude (Anthropic): provided independent technical reviews of terrain, SPICE, delay-sweep and submission-resource assumptions.
+
+How they were used:
+AI tools were used as development and review assistants. The team ran the code, downloaded and processed the scientific inputs, inspected the generated outputs, executed tests, performed the JPL Horizons comparison and made the final project decisions. Scientific data values in the dashboard are produced by deterministic calculations from the cited terrain and ephemeris inputs; they are not invented by a generative model.
+
+Content acknowledgement:
+The project description, documentation, some code and test scaffolding were AI-assisted and reviewed by the team. The seven-slide deck's charts are generated from the project's computed CSV data. No AI-generated photographs, audio or video are used in this slide presentation. No NASA branding, logos, flags or mission identifiers have been generated or modified.
+
+The team remains responsible for the accuracy, originality, licensing compliance and final submitted work. AI assistance does not imply NASA review or endorsement.
