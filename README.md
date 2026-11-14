@@ -82,3 +82,17 @@ ChatGPT assisted with software architecture, code drafting, debugging, tests, sc
 This is a reproducible prototype, not an operational lunar mission tool or landing-site certification. It currently has one provisional test point, a 45 km range-limited regional horizon, a 48-hour ephemeris interval, incomplete DEM uncertainty propagation, no comprehensive local slope/hazard model, no DSN link budget and no solar power-system model. Do not interpret the current 100% Sun / 0% Earth result as universal for the lunar South Pole.
 
 NASA/JPL/CSA resources are cited as data and reference sources. This project is independently developed and is not endorsed by NASA, JPL or CSA. Follow product-specific usage terms before redistributing source data or imagery.
+
+## Testing
+
+Install test dependencies:
+
+    pip install -r requirements-test.txt
+
+Run the test suites:
+
+    python -m unittest discover -s tests -v
+    pytest -rs -q
+    python scripts/run_v6_audit_tests.py
+
+The Site01 CRS control-point test is skipped when the original local DEM is unavailable. Obtain the source DEM from the cited NASA PGDA product to run it.
